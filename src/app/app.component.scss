@@ -1,0 +1,84 @@
+// ラジオボタン
+:host ::ng-deep {
+  #radio-wrap {
+    .mat-radio-group {
+      // ラベル色
+      .mat-radio-label {
+        // ボタン間のマージン
+        margin-right: 3rem;
+        color: aqua;
+      }
+      // 未チェック時の枠線
+      .mat-radio-outer-circle {
+        border-color: aqua;
+      }
+
+      // ■ チェックドの設定
+      .mat-radio-checked {
+        // 中点の色
+        .mat-radio-inner-circle {
+          background-color: red;
+        }
+        // チェックドの際の枠線の色
+        .mat-radio-outer-circle {
+          border-color: red;
+        }
+      }
+
+      // ■ disabledの設定
+      .mat-radio-disabled {
+        // disabledの際のラベルの色
+        .mat-radio-label {
+          color: darkgray;
+        }
+        // disabledの際の枠線の色
+        .mat-radio-outer-circle {
+          border-color: darkgray;
+        }
+      }
+    }
+  }
+}
+
+// チェックボックス
+:host ::ng-deep {
+  #checkbox-wrap {
+    // 文字色
+    .mat-checkbox-label {
+      // ボタン間のマージン
+      margin-right: 3rem;
+      color: aqua;
+    }
+    // チェックボックスを非表示に
+    .mat-checkbox-checkmark {
+      display: none;
+    }
+    // 未チェック時の枠の色
+    .mat-checkbox-frame {
+      border-color: aqua;
+    }
+
+    // チェックドの色
+    .mat-checkbox-checked .mat-checkbox-background {
+      background-color: red;
+    }
+
+    // ■ disabledの設定
+    .mat-checkbox-disabled {
+      // disabledの文字色
+      .mat-checkbox-label {
+        color: darkgray;
+      }
+      // disabled且つ未チェックの色
+      .mat-checkbox-frame {
+        border-color: darkgray;
+      }
+      // disabled且つチェックドの色
+      &.mat-checkbox-checked {
+        .mat-checkbox-background {
+          background-color: darkgray;
+        }
+      }
+    }
+  }
+}
